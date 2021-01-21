@@ -1,0 +1,33 @@
+{
+    "live": false,
+    "data": "C://Data backtestmarket//DAX//dax-1m.csv",
+    "start_time": "00:20:00",
+    "end_time": "22:00:00",
+    "log_transactions": false,
+    "starting_balance": 20000,
+    "market_constants": {
+        "spread": 0.4,
+        "initial_margin_1cfd": 169,
+        "swap_long": 0.86,
+        "swap_short": 0
+    },
+    "trading_window": {
+        "start": 1200,
+        "end": 7200
+    },
+    "TA": {
+        "sma_length": 360,
+        "std_length": 60,
+        "std_size": 2.0
+    },
+    "timeout_size": 30,
+    "b_factor_take_profit": 0.5,
+    "k_factor_take_profit": 3,
+    "b_factor_enter_market": 0.5,
+    "k_factor_enter_market": 1,
+    "max_difference_with_last_price_in_std_mean": 3,
+    "bollinger_band_min_difference": 1,
+    "std_base": 25,
+    "update_freq": 60,
+    "number_of_cfd": 40
+}
