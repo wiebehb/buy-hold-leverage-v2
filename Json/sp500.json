@@ -1,0 +1,17 @@
+{
+    "data_path": "C:/Data buy and hold/GSPC.csv",
+    "path_vix": "C:/Data buy and hold/vix.csv",
+    "start_time": "00:20:00",
+    "end_time": "22:00:00",
+    "starting_balance": 20000,
+    "market_constants": {
+        "spread": 0.4,
+        "initial_margin_1cfd": 169,
+        "swap_long": 0.86,
+        "swap_short": 0
+    },
+    "trading_window": {
+        "start": 1200,
+        "end": 7200
+    }
+}
