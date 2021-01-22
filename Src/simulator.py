@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 import sys 
 
+from dataframe import Dataframe
 
 def load_configuration(file_name):
     fileDir = os.path.dirname(os.path.realpath('__file__'))
@@ -12,16 +13,16 @@ def load_configuration(file_name):
         configuration = json.load(json_file)
     return configuration
 
-def load_dataframe(config):
-    path_data = config['data']
-    df = pd.read_csv(path_data, sep = ',', header = None)
-
-    print(df)
-
 if __name__ == "__main__":
     if (len(sys.argv) != 2):
         print("Error")
     else:
         # initialize
         config = load_configuration(sys.argv[1])
-        load_dataframe(config)
+        df = Dataframe()
+
+        df_index = df.load_dataframe(config)
+
+        df_merged = df.merge_vix(config, df_index)
+
+        print(df_merged)
